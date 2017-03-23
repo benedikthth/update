@@ -10,6 +10,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Spock.is</h2>
+          <h3>This is Work in progress</h3>
         </div>
 
       </div>
