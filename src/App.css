@@ -1,14 +1,29 @@
+.color-primary-0 { color: #204981 }	/* Main Primary color */
+.color-primary-1 { color: #5177AB }
+.color-primary-2 { color: #365E96 }
+.color-primary-3 { color: #133565 }
+.color-primary-4 { color: #062046 }
+
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.App-profile {
+  transition: all 1s ease;
   height: 80px;
+  border-radius: 5px;
+  float:left;
+}
+
+.App-profile:hover {
+  transition: all 1s ease;
+  filter: blur(1px);
 }
 
 .App-header {
-  background-color: #222;
+  background-color: .color-primary-4;
   height: 150px;
   padding: 20px;
   color: white;
