@@ -52,6 +52,7 @@ class App extends Component {
             <Tabs onSelect={this.handleSelect} selectedIndex={0}>
               <TabList>
                 <Tab><Translate path="tabs.introduction.label"/></Tab>
+                <Tab><Translate path="tabs.links.label" /></Tab>
                 <Tab><Translate path="tabs.contact.label" /></Tab>
               </TabList>
 
@@ -61,7 +62,10 @@ class App extends Component {
               <TabPanel>
                 <Translate path="tabs.introduction.titleText"  tagName="h2" />
                 <Translate path="tabs.introduction.summary" age={age} tagName="p"/>
+              </TabPanel>
 
+              <TabPanel>
+                <Translate path="tabs.links.titleText" tagName="h2"/>
               </TabPanel>
 
 

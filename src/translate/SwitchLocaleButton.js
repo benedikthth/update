@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import flag_iceland from './iceland.png';
-import flag_US from './us.png';
 class SwitchLocaleButton extends Component {
 
   constructor(props, context){
