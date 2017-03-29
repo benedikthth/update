@@ -12,6 +12,6 @@ const locales = [{
 }];
 
 ReactDOM.render(
-    <App data={languageData} locales={locales} />,
+  <App data={languageData} locales={locales} />,
   document.getElementById('root')
 );
