@@ -10,6 +10,13 @@ export default {
       links: {
         label: "Portfolio",
         titleText: "This is a list of some of the websites i've made.",
+        links: {
+          procedural: "A procedurally generated game map.",
+          space: "A simple space shooter game made in javascript.",
+          painter: "A painting application made for a webprogramming course.",
+          flappy: "A flappy-bird clone made for the same webprogramming course.",
+          wheel: "A lucky wheel application"
+        }
 
       },
       contact: {
@@ -28,6 +35,13 @@ export default {
       links: {
         label: "Portfolio",
         titleText: "Hér eru dæmi um vefsíður sem ég hef búið til.",
+        links: {
+          procedural: "Tölvuleikjakort sem verður til við rauntíma.",
+          space: "Einfadur leikur þar sem þú flígur geimskipi og skítur óvini.",
+          painter: "Teikniforrit sem var gert fyrir námskeið í vefforritun.",
+          flappy: "´flappy-bird´ forrit sem var gert fyrir sama vefforritunar námskeið.",
+          wheel: "Lukkuhjól"
+        }
 
       },
       contact: {

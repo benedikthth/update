@@ -14,7 +14,8 @@ class App extends Component {
   constructor(props, context){
     super(props, context);
     this.state = {
-      locale: "en_US"
+      locale: "en_US",
+      currentTab: 0
     };
   }
 
@@ -22,8 +23,16 @@ class App extends Component {
     console.log(locale);
     this.setState({
       locale: locale,
+      currentTab: this.state.currentTab
     });
-    this.render();
+  }
+
+  tabChange(tab){
+    this.setState({
+      locale: this.state.locale,
+      currentTab: tab
+    });
+    return this.handleSelect;
   }
 
   calcAge() {
@@ -49,7 +58,7 @@ class App extends Component {
             <Translate tagName="h2" path='welcome'/>
             <h3>This is Work in progress</h3>
 
-            <Tabs onSelect={this.handleSelect} selectedIndex={0}>
+            <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={this.state.currentTab}>
               <TabList>
                 <Tab><Translate path="tabs.introduction.label"/></Tab>
                 <Tab><Translate path="tabs.links.label" /></Tab>
@@ -64,13 +73,39 @@ class App extends Component {
 
               <TabPanel>
                 <Translate path="tabs.links.titleText" tagName="h2"/>
+                <ul>
+                  <li>
+                    <a href="http://www.code.spock.is/procedural">
+                      <Translate path="tabs.links.links.procedural"/>
+                      </a>
+                  </li>
+                    <li>
+                      <a href="http://www.space.spock.is">
+                        <Translate path="tabs.links.links.space"/>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="http://www.painter.spock.is">
+                      <Translate path="tabs.links.links.painter"/>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.flappy.spock.is">
+                      <Translate path="tabs.links.links.flappy"/>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.wheel.spock.is">
+                      <Translate path="tabs.links.links.wheel"/>
+                    </a>
+                  </li>
+                </ul>
               </TabPanel>
-
-
 
               <TabPanel>
                 <h2>HERE ARE LINKS</h2>
               </TabPanel>
+
             </Tabs>
 
           </div>
