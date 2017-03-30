@@ -57,8 +57,6 @@ class App extends Component {
               </TabList>
 
 
-
-
               <TabPanel>
                 <Translate path="tabs.introduction.titleText"  tagName="h2" />
                 <Translate path="tabs.introduction.summary" age={age} tagName="p"/>
