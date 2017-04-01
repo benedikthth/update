@@ -110,8 +110,12 @@ class App extends Component {
                 <Translate path="tabs.contact.titleText" tagName="h2" />
                 <ul>
                   <li>
-                    <a href="www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
-                    <a href="www.linkedin.com/in/bennijesus/"><Translate path="tabs.contact.links.linkedIn" /></a>
+                    <a href="http://www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
+                  </li>
+                  <li>
+                    <a href="http://www.linkedin.com/in/bennijesus/"><Translate path="tabs.contact.links.linkedIn" /></a>
+                  </li>
+                  <li>
                     <a href="mailto:benedikthth@gmail.com"><Translate path="tabs.contact.links.email" /></a>
                   </li>
                 </ul>
