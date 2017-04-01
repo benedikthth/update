@@ -20,7 +20,13 @@ export default {
 
       },
       contact: {
-        label: "Contact me"
+        label: "Contact me",
+        titleText: "",
+        links: {
+          github:"Github",
+          linkedIn: "linkedIn",
+          email: "benedikthth@gmail.com"
+        }
       }
     }
   },
@@ -45,7 +51,13 @@ export default {
 
       },
       contact: {
-        label: "Hafðu samband"
+        label: "Hafðu samband",
+        titleText: "Hafðu samband við mig í gegnum eftirfarandi:",
+        links: {
+          github:"Github",
+          linkedIn: "linkedIn",
+          email: "benedikthth@gmail.com"
+        }
       }
     }
   },

@@ -56,7 +56,11 @@ class App extends Component {
             <img src={image} className="App-profile" alt="profile image" />
             <SwitchLocaleButton click={this.handleLocaleChange.bind(this)} locales={locales} currentLocale={currentLocale}/>
             <Translate tagName="h2" path='welcome'/>
-            <h3>This is Work in progress</h3>
+          </div>
+
+          <div className="tabSection">
+
+            <div className="glowConceal"></div>
 
             <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={this.state.currentTab}>
               <TabList>
@@ -103,13 +107,19 @@ class App extends Component {
               </TabPanel>
 
               <TabPanel>
-                <h2>HERE ARE LINKS</h2>
+                <Translate path="tabs.contact.titleText" tagName="h2" />
+                <ul>
+                  <li>
+                    <a href="www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
+                    <a href="www.linkedin.com/in/bennijesus/"><Translate path="tabs.contact.links.linkedIn" /></a>
+                    <a href="mailto:benedikthth@gmail.com"><Translate path="tabs.contact.links.email" /></a>
+                  </li>
+                </ul>
               </TabPanel>
 
             </Tabs>
 
-          </div>
-
+        </div>
 
         </div>
       </LocaleProvider>

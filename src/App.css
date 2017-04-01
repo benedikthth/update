@@ -4,11 +4,30 @@
   --color-primary-2: #365E96;
   --color-primary-3: #133565;
   --color-primary-4: #062046;
+
+  /*BLACK COLOR SCHEME*/
+
+  --color-dark-pastel-0: #203046; /**/
+  --color-dark-pastel-1: #425063; /*lighter*/
+  --color-dark-pastel-2: #2E3A4B; /**/
+  --color-dark-pastel-3: #14253C; /**/
+  --color-dark-pastel-4: #09182D; /**/
+
+  /*lighter pastelly*/
+
+  --color-light-pastel-0: #2C4870;
+  --color-light-pastel-1: #758AA8;
+  --color-light-pastel-2: #4C678C;
+  --color-light-pastel-3: #142F54;
+  --color-light-pastel-4: #051A38;
+
 }
+
 
 
 .App {
   text-align: center;
+  color: var(--color-light-pastel-1);
 }
 
 .App-profile {
@@ -26,48 +45,101 @@
 .App-header {
   height: 150px;
   padding: 20px;
-  color: white;
-  background-color: var(--color-primary-3);
-  box-shadow: 0px 10px 10px var(--color-primary-3);
+  /*background-color: var(--color-primary-3);*/
+  background-color: var(--color-light-pastel-4);
+  border-bottom: var(--color-light-pastel-0) solid 2px;
+  margin-bottom: 0px;
+  /*box-shadow: 0px 10px 10px var(--color-primary-3);*/
 }
 
 .App-intro {
   font-size: large;
 }
 
+/*<LI>*/
+ul{
+    list-style-type: none;
+}
+ul li{
+  padding: 10px 10px 10px 10px;
+  background-color: var(--color-light-pastel-0);
+  margin: 5px 0px 0px 0px;
+  border-radius: 1em;
+}
+
+ul li a {
+  color: var(--color-light-pastel-1);
+  text-decoration: none;
+}
+ul li a:visited {
+
+}
+
+ul li .icon {
+  float: left;
+}
+/*</LI>*/
+
+
 /*<TABS>*/
+.glowConceal{
+  background-color: var(--color-light-pastel-4);
+  height: 2.8em;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
 .ReactTabs__TabList{
+  position: relative;
+  z-index: 3;
+  padding: 0px 0px 0px 0px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
   margin-bottom: 0px;
   display: inline-block;
 }
 
 .ReactTabs__TabPanel{
+  position: relative;
+  z-index: 0;
   display: block;
-  margin-top: 15px;
-  border-radius: 1em;
-  border: 2px solid var(--color-primary-3);
+  margin-top: -0.3em;
+  margin-left: 10%;
+  color: var(--color-light-pastel-1);
+  margin-right: 10%;
+  border-radius: 0em 0em 1em 1em;
   padding: 10px 30px 10px 30px;
-  background-color: var(--color-primary-2);
+
+  border-bottom: 4px double var(--color-light-pastel-2);
+
+  box-shadow: 0px 10px 60px var(--color-light-pastel-0);
+  background-color: var(--color-light-pastel-4);
+
+  animation: zoomIn 0.3s;
+}
+
+.tabSection{/*
+  transform: translateY(-62px);
+  */
+  transform: translateY(-3.1em);
 }
 
 .ReactTabs__Tab {
   float:left;
   display: inline;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 13px 10px;
   border-radius: 5px 5px 0px 0px;
-  border: 2px solid var(--color-primary-4);
+  /*border: 2px solid var(--color-primary-4);*/
+  border: 2px solid var(--color-light-pastel-0);
   border-style: solid hidden solid solid;
-  background-color: var(--color-primary-2);
-}
-
-.ReactTabs__Tab:last-child{
-  border-style: solid solid solid solid;
+  /*background-color: var(--color-primary-2);*/
+  background-color: var(--color-light-pastel-2);
 }
 
 .ReactTabs__Tab--selected{
-  background-color: var(--color-primary-1);
+  background-color: var(--color-light-pastel-0);
 }
 /*</TABS>*/
 
@@ -75,7 +147,7 @@
 .SwitchLocaleButton {
   transition: background-image 1s ease-in-out;
   float: right;
-  background-color: var(--color-primary-1);
+  background-color: var(--color-light-pastel-1);
   height: 40px;
   width: 60px;
   border-radius: 5px;
@@ -93,7 +165,13 @@
 /*</SWITCHLOCALE>*/
 
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 1, 1);
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
