@@ -6,6 +6,11 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Translate, { LocaleProvider, /*LocaleSwitch,*/ TranslateMaker } from 'react-translate-maker'
 import SwitchLocaleButton from './translate/SwitchLocaleButton.js';
 
+//import * as FontAwesome from 'react-icons/fa';
+
+var Github = require('react-icons/lib/fa/github'),
+    Linkedin = require('react-icons/lib/fa/linkedin'),
+    Email = require('react-icons/lib/fa/envelope-o');
 
 Tabs.setUseDefaultStyles(false);
 
@@ -110,12 +115,15 @@ class App extends Component {
                 <Translate path="tabs.contact.titleText" tagName="h2" />
                 <ul>
                   <li>
-                    <a href="http://www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
+                    <Github className="faicon"/>
+                    <a href="h  ttp://www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
                   </li>
                   <li>
+                    <Linkedin className="faicon"/>
                     <a href="http://www.linkedin.com/in/bennijesus/"><Translate path="tabs.contact.links.linkedIn" /></a>
                   </li>
                   <li>
+                    <Email className="faicon"/>
                     <a href="mailto:benedikthth@gmail.com"><Translate path="tabs.contact.links.email" /></a>
                   </li>
                 </ul>
