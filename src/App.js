@@ -13,9 +13,13 @@ class App extends Component {
 
   constructor(props, context){
     super(props, context);
+
+    console.log(window.location.hash.split('#'));
+    var ct = 0;
+    if(window.location.hash !== ""){ ct=parseInt(window.location.hash.split('#')[1]) }
     this.state = {
       locale: "en_US",
-      currentTab: 0
+      currentTab: ct
     };
   }
 
@@ -28,6 +32,7 @@ class App extends Component {
   }
 
   tabChange(tab){
+    window.location.hash = tab;
     this.setState({
       locale: this.state.locale,
       currentTab: tab
@@ -60,9 +65,9 @@ class App extends Component {
 
             <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={this.state.currentTab}>
               <TabList>
-                <Tab><Translate path="tabs.introduction.label"/></Tab>
-                <Tab><Translate path="tabs.links.label" /></Tab>
-                <Tab><Translate path="tabs.contact.label" /></Tab>
+                <Tab> <Translate path="tabs.introduction.label"/> </Tab>
+                <Tab> <Translate path="tabs.links.label" /> </Tab>
+                <Tab> <Translate path="tabs.contact.label" /> </Tab>
               </TabList>
 
 
@@ -77,12 +82,17 @@ class App extends Component {
                   <li>
                     <a href="http://www.code.spock.is/procedural">
                       <Translate path="tabs.links.links.procedural"/>
-                      </a>
+                    </a>
                   </li>
-                    <li>
-                      <a href="http://www.space.spock.is">
-                        <Translate path="tabs.links.links.space"/>
-                      </a>
+                  <li>
+                    <a href="http://www.code.spock.is/sudoku">
+                      <Translate path="tabs.links.links.sudoku"/>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.space.spock.is">
+                      <Translate path="tabs.links.links.space"/>
+                    </a>
                   </li>
                   <li>
                     <a href="http://www.painter.spock.is">

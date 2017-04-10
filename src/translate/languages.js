@@ -12,6 +12,7 @@ export default {
         titleText: "This is a list of some of the websites i've made.",
         links: {
           procedural: "A procedurally generated game map.",
+          sudoku: "A simple sudoku checker made in about 2 hours.",
           space: "A simple space shooter game made in javascript.",
           painter: "A painting application made for a webprogramming course.",
           flappy: "A flappy-bird clone made for the same webprogramming course.",
@@ -37,6 +38,7 @@ export default {
         titleText: "Hér eru dæmi um vefsíður sem ég hef búið til.",
         links: {
           procedural: "Tölvuleikjakort sem verður til við rauntíma.",
+          sudoku: "Einfalt Sudoku forrit sem tók um það bil 2 tíma að gera.",
           space: "Einfadur leikur þar sem þú flígur geimskipi og skítur óvini.",
           painter: "Teikniforrit sem var gert fyrir námskeið í vefforritun.",
           flappy: "´flappy-bird´ forrit sem var gert fyrir sama vefforritunar námskeið.",
