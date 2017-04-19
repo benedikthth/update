@@ -45,7 +45,7 @@ export default {
         links: {
           procedural: "Tölvuleikjakort sem verður til við rauntíma.",
           sudoku: "Einfalt Sudoku forrit",
-          space: "Einfadur leikur þar sem þú flígur geimskipi og skítur óvini.",
+          space: "Einfadur leikur þar sem þú flýgur geimskipi og skýtur óvini.",
           painter: "Teikniforrit sem var gert fyrir námskeið í vefforritun.",
           flappy: "´flappy-bird´ forrit sem var gert fyrir sama vefforritunar námskeið.",
           wheel: "Lukkuhjól"
