@@ -28,7 +28,7 @@ class App extends Component {
     var c_color = Cookies.load('color');
     var c_locale = Cookies.load('locale');
     console.log(c_tab);
-    if(c_tab === NaN){
+    if( isNaN(c_tab) ){
       c_tab = 0;
       Cookies.save('sTab', c_tab);
     }
