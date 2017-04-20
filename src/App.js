@@ -10,7 +10,9 @@ import SwitchLocaleButton from './translate/SwitchLocaleButton.js';
 
 var Github = require('react-icons/lib/fa/github'),
     Linkedin = require('react-icons/lib/fa/linkedin'),
-    Email = require('react-icons/lib/fa/envelope-o');
+    Email = require('react-icons/lib/fa/envelope-o'),
+    Moon = require('react-icons/lib/fa/moon-o'),
+    Sun = require('react-icons/lib/fa/sun-o');
 
 Tabs.setUseDefaultStyles(false);
 
@@ -23,14 +25,25 @@ class App extends Component {
     var ct = 0;
     if(window.location.hash !== ""){ ct=parseInt(window.location.hash.split('#')[1]) }
     this.state = {
+      colorScheme: 'day',
       locale: "en_US",
       currentTab: ct
     };
   }
 
+  colorSchemeChange(){
+    var cs = (this.state.colorScheme === 'day')? 'night': 'day';
+    this.setState({
+      colorScheme: cs,
+      locale: this.state.locale,
+      currentTab: this.state.currentTab
+    });
+  }
+
   handleLocaleChange(locale) {
     console.log(locale);
     this.setState({
+      colorScheme: this.state.colorScheme,
       locale: locale,
       currentTab: this.state.currentTab
     });
@@ -39,6 +52,7 @@ class App extends Component {
   tabChange(tab){
     window.location.hash = tab;
     this.setState({
+      colorScheme: this.state.colorScheme,
       locale: this.state.locale,
       currentTab: tab
     });
@@ -54,23 +68,28 @@ class App extends Component {
     const age = this.calcAge();
     const {data, locales} = this.props;
     const currentLocale = this.state.locale;
+    const colorScheme = this.state.colorScheme;
     const translate = new TranslateMaker({
       data: data,
     });
+    const CSicon = (colorScheme === 'day')? Moon: Sun;
     return (
 
       <LocaleProvider translate={translate} locale={currentLocale} >
 
-        <div className="App">
-          <div className="App-header">
+        <div className={"App "+colorScheme} >
+          <div className={"App-header "+colorScheme}>
             <img src={image} className="App-profile" alt="profile image" />
             <SwitchLocaleButton click={this.handleLocaleChange.bind(this)} locales={locales} currentLocale={currentLocale}/>
+            <button className={"changeColorScheme "+colorScheme} onClick={this.colorSchemeChange.bind(this)} >
+              <CSicon />
+            </button>
             <Translate tagName="h2" path='welcome'/>
           </div>
 
-          <div className="tabSection">
+          <div className={"tabSection " + colorScheme}>
 
-            <div className="glowConceal"></div>
+            <div className={"glowConceal " +colorScheme}></div>
 
             <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={this.state.currentTab}>
               <TabList>
@@ -87,7 +106,7 @@ class App extends Component {
 
               <TabPanel>
                 <Translate path="tabs.links.titleText" tagName="h2"/>
-                <ul>
+                <ul className={colorScheme}>
                   <li>
                     <a href="http://www.code.spock.is/procedural">
                       <Translate path="tabs.links.links.procedural"/>
@@ -123,7 +142,7 @@ class App extends Component {
 
               <TabPanel>
                 <Translate path="tabs.contact.titleText" tagName="h2" />
-                <ul>
+                <ul className={colorScheme}>
                   <li>
                     <Github className="faicon"/>
                     <a href="h  ttp://www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
@@ -143,6 +162,7 @@ class App extends Component {
 
         </div>
 
+        <div className={"background "+colorScheme}></div>
         </div>
       </LocaleProvider>
     );

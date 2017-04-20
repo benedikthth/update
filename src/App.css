@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
 :root {
   --color-primary-0: #204981;
   --color-primary-1: #5177AB;
@@ -21,13 +23,143 @@
   --color-light-pastel-3: #142F54;
   --color-light-pastel-4: #051A38;
 
+
+
+  --color-day-0: #5BACD3;
+  --color-day-1: #B8E1F5;
+  --color-day-2: #84C5E5;
+  --color-day-3: #3A93BE;
+  --color-day-4: #1C79A7;
+  --color-day-text: black;
+  /*
+  --color-night-0: #150D78;
+  --color-night-1: #3D34B0;
+  --color-night-2: #1E1596;
+  --color-night-3: #0D0759;
+  --color-night-4: #050231;
+  */
+  --color-night-0: #2C4870;
+  --color-night-1: #758AA8;
+  --color-night-2: #4C678C;
+  --color-night-3: #142F54;
+  --color-night-4: #051A38;
+  --color-night-text: white;
+}
+
+
+.changeColorScheme.day{
+  background-color: var(--color-day-4);
+  border-color: var(--color-day-1);
+
+
+}
+.changeColorScheme.night{
+  background-color: var(--color-night-1);
+  border-color: var(--color-night-2);
+}
+
+
+.changeColorScheme {
+  border-style: solid solid solid none;
+  border-radius: 0px 4px 4px 0px;
+  float:left;
+}
+
+
+body * {
+  transition: background-color 0.5s ease-in-out;
+  font-family: 'Josefin Slab', serif;
+}
+
+/*background*/
+.background.day{
+  background-color: var(--color-day-0);
+}
+.background.night{
+  background-color: var(--color-night-0);
+}
+.background{
+  position: absolute;
+  height: 100%;
+  overflow-y: hidden;
+  width: 100%;
 }
 
 
 
+/* ========================================================================== */
+.glowConceal.day{
+  background-color: var(--color-day-2);
+}
+.glowConceal.night{
+  background-color: var(--color-night-3);
+}
+.glowConceal{
+  height: 2.8em;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.App-header {
+  height: 150px;
+  padding: 20px;
+  margin-bottom: 0px;
+}
+.App-header.day{
+  background-color: var(--color-day-2);
+  border-bottom: var(--color-day-2) solid 2px;
+}
+.App-header.night{
+  background-color: var(--color-night-3);
+  border-bottom: var(--color-night-2) solid 2px;
+}
+/* ========================================================================== */
+
+
+/* UL STYLES */
+ul{
+    list-style-type: none;
+}
+
+ul.day li{
+  background-color: var(--color-day-0);
+}
+ul.night li{
+  background-color: var(--color-night-0);
+}
+ul li{
+  padding: 10px 10px 10px 10px;
+  margin: 5px 0px 0px 0px;
+  border-radius: 1em;
+}
+
+ul.day li a{
+  color: var(--color-day-text);
+}
+ul.night li a{
+  color: var(--color-night-text);
+  /*color: var(--color-night-1);*/
+}
+ul li a {
+  text-decoration: none;
+}
+ul li a:visited {
+
+}
+/*UL LI STYLES*/
+
+
+.App.day{
+  background-color: var(--color-day-0);
+  color: var(--color-day-text);
+}
+.App.night{
+  background-color: var(--color-night-0);
+  color: var(--color-night-text);
+}
 .App {
   text-align: center;
-  color: var(--color-light-pastel-1);
 }
 
 .App-profile {
@@ -42,38 +174,12 @@
   filter: blur(1px);
 }
 
-.App-header {
-  height: 150px;
-  padding: 20px;
-  /*background-color: var(--color-primary-3);*/
-  background-color: var(--color-light-pastel-4);
-  border-bottom: var(--color-light-pastel-0) solid 2px;
-  margin-bottom: 0px;
-  /*box-shadow: 0px 10px 10px var(--color-primary-3);*/
-}
+
 
 .App-intro {
   font-size: large;
 }
 
-/*<LI>*/
-ul{
-    list-style-type: none;
-}
-ul li{
-  padding: 10px 10px 10px 10px;
-  background-color: var(--color-light-pastel-0);
-  margin: 5px 0px 0px 0px;
-  border-radius: 1em;
-}
-
-ul li a {
-  color: var(--color-light-pastel-1);
-  text-decoration: none;
-}
-ul li a:visited {
-
-}
 
 .faicon {
   float: left;
@@ -82,13 +188,7 @@ ul li a:visited {
 
 
 /*<TABS>*/
-.glowConceal{
-  background-color: var(--color-light-pastel-4);
-  height: 2.8em;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-}
+
 
 .ReactTabs__TabList{
   position: relative;
@@ -101,45 +201,66 @@ ul li a:visited {
   display: inline-block;
 }
 
+
+/*REACT TABS*/
+.tabSection.day .ReactTabs__TabPanel{
+  color: var(--color-day-text);
+  background-color: var(--color-day-1);
+  box-shadow: 0px 10px 60px var(--color-day-4);
+  border-bottom: 4px double var(--color-day-4);
+}
+.tabSection.night .ReactTabs__TabPanel{
+  color: var(--color-night-text);
+  background-color: var(--color-night-0);
+  box-shadow: 0px 10px 60px var(--color-night-4);
+  border-bottom: 4px double var(--color-night-2);
+}
+
 .ReactTabs__TabPanel{
   position: relative;
   z-index: 0;
   display: block;
   margin-top: -0.3em;
   margin-left: 10%;
-  color: var(--color-light-pastel-1);
   margin-right: 10%;
   border-radius: 0em 0em 1em 1em;
   padding: 10px 30px 10px 30px;
-
-  border-bottom: 4px double var(--color-light-pastel-2);
-
-  box-shadow: 0px 10px 60px var(--color-light-pastel-0);
-  background-color: var(--color-light-pastel-4);
-
   animation: zoomIn 0.3s;
 }
-
+/*TAB PANELS*/
 .tabSection{/*
   transform: translateY(-62px);
   */
   transform: translateY(-3.1em);
 }
 
+
+
+.tabSection.day .ReactTabs__Tab{
+  background-color: var(--color-day-0);
+  border: 2px solid var(--color-day-1);
+}
+.tabSection.night .ReactTabs__Tab{
+  background-color: var(--color-night-2);
+  border: 2px solid var(--color-night-0);
+}
 .ReactTabs__Tab {
+  transition: background-color 0.1s ease-in-out;
   float:left;
   display: inline;
   padding: 10px 10px 13px 10px;
-  border-radius: 5px 5px 0px 0px;
-  /*border: 2px solid var(--color-primary-4);*/
-  border: 2px solid var(--color-light-pastel-0);
+  /*border-radius: 5px 5px 0px 0px;*/
+  border-radius: 0px 0px 0px 0px;
   border-style: solid hidden solid solid;
-  /*background-color: var(--color-primary-2);*/
-  background-color: var(--color-light-pastel-2);
 }
 
-.ReactTabs__Tab--selected{
-  background-color: var(--color-light-pastel-0);
+
+
+.tabSection.day .ReactTabs__Tab--selected{
+  background-color: var(--color-day-3);
+}
+.tabSection.night .ReactTabs__Tab--selected{
+  background-color: var(--color-night-0);
 }
 /*</TABS>*/
 
@@ -168,10 +289,10 @@ ul li a:visited {
 @keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale3d(0.3, 1, 1);
+    transform: scale3d(0.3, 0, 0);
   }
 
-  50% {
+  100% {
     opacity: 1;
   }
 }

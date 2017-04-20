@@ -1,6 +1,7 @@
 export default {
   en_US:{
     welcome:'Welcome to spock.is',
+    changeScheme: 'Change Scheme',
     tabs:{
       introduction: {
         label: "Introduction",
@@ -33,6 +34,7 @@ export default {
   },
   is_IS:{
     welcome:'Velkomin á spock.is',
+    changeScheme: 'Change Scheme',
     tabs:{
       introduction: {
         label: "Um mig",
