@@ -5,7 +5,7 @@ import image from './profile.jpg';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Translate, { LocaleProvider, /*LocaleSwitch,*/ TranslateMaker } from 'react-translate-maker'
 import SwitchLocaleButton from './translate/SwitchLocaleButton.js';
-
+import Cookies from 'react-cookie';
 //import * as FontAwesome from 'react-icons/fa';
 
 var Github = require('react-icons/lib/fa/github'),
@@ -22,17 +22,35 @@ class App extends Component {
     super(props, context);
 
     console.log(window.location.hash.split('#'));
-    var ct = 0;
-    if(window.location.hash !== ""){ ct=parseInt(window.location.hash.split('#')[1]) }
+    //var ct = 0;
+    //if(window.location.hash !== ""){ ct=parseInt(window.location.hash.split('#')[1]) }
+    var c_tab = parseInt(Cookies.load('sTab'));
+    var c_color = Cookies.load('color');
+    var c_locale = Cookies.load('locale');
+    console.log(c_tab);
+    if(c_tab === NaN){
+      c_tab = 0;
+      Cookies.save('sTab', c_tab);
+    }
+    if(c_color === undefined){
+      c_color = 'day';
+      Cookies.save('color', 'day');
+    }
+    if(c_locale === undefined){
+      c_locale = 'en_US';
+      Cookies.save('locale', c_locale);
+    }
+
     this.state = {
-      colorScheme: 'day',
-      locale: "en_US",
-      currentTab: ct
+      colorScheme: c_color,
+      locale: c_locale,
+      currentTab: c_tab
     };
   }
 
   colorSchemeChange(){
     var cs = (this.state.colorScheme === 'day')? 'night': 'day';
+    Cookies.save('color', cs);
     this.setState({
       colorScheme: cs,
       locale: this.state.locale,
@@ -42,6 +60,7 @@ class App extends Component {
 
   handleLocaleChange(locale) {
     console.log(locale);
+    Cookies.save('locale', locale);
     this.setState({
       colorScheme: this.state.colorScheme,
       locale: locale,
@@ -50,7 +69,7 @@ class App extends Component {
   }
 
   tabChange(tab){
-    window.location.hash = tab;
+    Cookies.save('sTab', tab);
     this.setState({
       colorScheme: this.state.colorScheme,
       locale: this.state.locale,
@@ -69,6 +88,7 @@ class App extends Component {
     const {data, locales} = this.props;
     const currentLocale = this.state.locale;
     const colorScheme = this.state.colorScheme;
+    const currentTab = this.state.currentTab;
     const translate = new TranslateMaker({
       data: data,
     });
@@ -91,7 +111,7 @@ class App extends Component {
 
             <div className={"glowConceal " +colorScheme}></div>
 
-            <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={this.state.currentTab}>
+            <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={currentTab}>
               <TabList>
                 <Tab> <Translate path="tabs.introduction.label"/> </Tab>
                 <Tab> <Translate path="tabs.links.label" /> </Tab>
