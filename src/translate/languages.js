@@ -6,7 +6,8 @@ export default {
       introduction: {
         label: "Introduction",
         titleText: "A brief introduction to myself",
-        summary: `I am a {$age} year old student of computer science at Reykjavík University. My interests lie in web design and server-side Javascript.`
+        summary: `I am a {$age} year old student of computer science at Reykjavík University. My interests lie in web design and server-side Javascript.`,
+        youth: ''
       },
       links: {
         label: "Portfolio",
@@ -39,7 +40,8 @@ export default {
       introduction: {
         label: "Um mig",
         titleText: "Stutt lýsing um sjálfan mig",
-        summary: `Ég er {$age} ára nemandi við tölvunarfræði í Háskólanum í Reykjavík. Ég hef sérstakann áhuga á vefhönnun og server-side javascript.`
+        summary: `Ég er {$age} ára nemandi við tölvunarfræði í Háskólanum í Reykjavík. Ég hef sérstakann áhuga á vefhönnun og server-side javascript.`,
+        youth: ''
       },
       links: {
         label: "Portfolio",
