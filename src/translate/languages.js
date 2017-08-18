@@ -7,7 +7,7 @@ export default {
         label: "Introduction",
         titleText: "A brief introduction to myself",
         summary: `I am a {$age} year old student of computer science at Reykjavík University. My interests lie in web design and server-side Javascript.`,
-        youth: ''
+        youth: 'ha?!'
       },
       links: {
         label: "Portfolio",
