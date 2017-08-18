@@ -165,7 +165,7 @@ class App extends Component {
                 <ul className={colorScheme}>
                   <li>
                     <Github className="faicon"/>
-                    <a href="h  ttp://www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
+                    <a href="http://www.github.com/benedikthth"><Translate path="tabs.contact.links.github" /></a>
                   </li>
                   <li>
                     <Linkedin className="faicon"/>
