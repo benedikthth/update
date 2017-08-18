@@ -38,7 +38,7 @@ export default {
     tabs:{
       introduction: {
         label: "Um mig",
-        titleText: "Stutt lýsing um sjálfann mig",
+        titleText: "Stutt lýsing um sjálfan mig",
         summary: `Ég er {$age} ára nemandi við tölvunarfræði í Háskólanum í Reykjavík. Ég hef sérstakann áhuga á vefhönnun og server-side javascript.`
       },
       links: {
