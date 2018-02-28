@@ -78,13 +78,9 @@ class App extends Component {
     return this.handleSelect;
   }
 
-  calcAge() {
-    var birthday = +new Date("25. Jul 1993");
-    return ~~((Date.now() - birthday) / (31557600000));
-  }
+
 
   render() {
-    const age = this.calcAge();
     const {data, locales} = this.props;
     const currentLocale = this.state.locale;
     const colorScheme = this.state.colorScheme;
@@ -99,7 +95,7 @@ class App extends Component {
 
         <div className={"App "+colorScheme} >
           <div className={"App-header "+colorScheme}>
-            <img src={image} className="App-profile" alt="profile image" />
+            <img src={image} className="App-profile" alt=" Benedikt Holm Thordarson" />
             <SwitchLocaleButton click={this.handleLocaleChange.bind(this)} locales={locales} currentLocale={currentLocale}/>
             <button className={"changeColorScheme "+colorScheme} onClick={this.colorSchemeChange.bind(this)} >
               <CSicon />
@@ -121,7 +117,9 @@ class App extends Component {
 
               <TabPanel>
                 <Translate path="tabs.introduction.titleText"  tagName="h2" />
-                <Translate path="tabs.introduction.summary" age={age} tagName="p"/>
+                <Translate path="tabs.introduction.summary" tagName="div"/>
+                <Translate path="tabs.introduction.interests" tagName="div"/>
+                <Translate path="tabs.introduction.hobbies" tagName="div"/>
               </TabPanel>
 
               <TabPanel>
