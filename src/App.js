@@ -88,6 +88,7 @@ class App extends Component {
     const translate = new TranslateMaker({
       data: data,
     });
+
     const CSicon = (colorScheme === 'day')? Moon: Sun;
     return (
 
@@ -105,7 +106,8 @@ class App extends Component {
 
           <div className={"tabSection " + colorScheme}>
 
-            <div className={"glowConceal " +colorScheme}></div>
+            {/*<div className={"glowConceal " +colorScheme}></div>*/}
+
 
             <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={currentTab}>
               <TabList>
@@ -116,10 +118,12 @@ class App extends Component {
 
 
               <TabPanel>
-                <Translate path="tabs.introduction.titleText"  tagName="h2" />
-                <Translate path="tabs.introduction.summary" tagName="div"/>
-                <Translate path="tabs.introduction.interests" tagName="div"/>
-                <Translate path="tabs.introduction.hobbies" tagName="div"/>
+                <Translate path="tabs.introduction.titleText"  tagName='h2' className='title' />
+                <Translate path="tabs.introduction.summary" tagName='div' className='paragraph summary'/>
+                <div className='connectbar left'></div>
+                <Translate path="tabs.introduction.interests" tagName='div' className='paragraph interests'/>
+                <div className='connectbar right'></div>
+                <Translate path="tabs.introduction.hobbies" tagName='div' className='paragraph hobbies'/>
               </TabPanel>
 
               <TabPanel>

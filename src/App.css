@@ -88,12 +88,7 @@ body * {
 
 
 /* ========================================================================== */
-.glowConceal.day{
-  background-color: var(--color-day-2);
-}
-.glowConceal.night{
-  background-color: var(--color-night-3);
-}
+
 .glowConceal{
   height: 2.8em;
   width: 100%;
@@ -123,10 +118,16 @@ ul{
 }
 
 ul.day li{
-  background-color: var(--color-day-0);
+  background-color: var(--color-day-2);
+}
+ul.day li:hover {
+  background-color: var(--color-day-1);
 }
 ul.night li{
   background-color: var(--color-night-2);
+}
+ul.night li:hover{
+   background-color: var(--color-night-1);
 }
 ul li{
   padding: 10px 10px 10px 10px;
@@ -204,25 +205,32 @@ ul li a:visited {
 
 /*REACT TABS*/
 .tabSection.day .ReactTabs__TabPanel{
+  /*
   color: var(--color-day-text);
   background-color: var(--color-day-1);
   box-shadow: 0px 10px 60px var(--color-day-4);
   border-bottom: 4px double var(--color-day-4);
+  */
 }
 .tabSection.night .ReactTabs__TabPanel{
+  /*
   color: var(--color-night-text);
   background-color: var(--color-night-0);
   box-shadow: 0px 10px 60px var(--color-night-4);
   border-bottom: 4px double var(--color-night-2);
+  */
 }
+
+
 
 .ReactTabs__TabPanel{
   position: relative;
   z-index: 0;
   display: block;
   margin-top: -0.3em;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+
   border-radius: 0em 0em 1em 1em;
   padding: 10px 30px 10px 30px;
   animation: zoomIn 0.3s;
@@ -234,7 +242,58 @@ ul li a:visited {
   transform: translateY(-3.1em);
 }
 
+.paragraph:nth-child(odd) {
+  margin-right: 10%;
+}
 
+.paragraph:nth-child(even) {
+  margin-left: 10%;
+}
+
+.paragraph {
+  padding: 5px 5px 5px 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 90%;
+  //border: 1px solid black;
+  z-index: 2;
+}
+
+.tabSection.day .paragraph{
+  background-color: var(--color-day-1);
+}
+
+.tabSection.night .paragraph {
+  background-color: var(--color-night-1);
+
+}
+
+.tabSection.day .connectbar{
+  background-color: var(--color-day-1);
+}
+
+.tabSection.night .connectbar {
+  background-color: var(--color-night-1);
+
+}
+
+.connectbar {
+  position: relative;
+  display: inline-block;
+  z-index: -1;
+  width: 130px;
+  height: 30px;
+}
+
+.connectbar.left {
+  right: 10%;
+  transform: rotate(65deg);
+}
+
+.connectbar.right {
+  left: 10%;
+  transform: rotate(-65deg);
+}
 
 .tabSection.day .ReactTabs__Tab{
   background-color: var(--color-day-0);
