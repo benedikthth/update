@@ -242,20 +242,24 @@ ul li a:visited {
   transform: translateY(-3.1em);
 }
 
+.constructionNotice {
+  color: #051A38;
+  background: #FF0000;
+}
+
 .paragraph:nth-child(odd) {
-  margin-right: 10%;
+
 }
 
 .paragraph:nth-child(even) {
-  margin-left: 10%;
+
 }
 
 .paragraph {
+
   padding: 5px 5px 5px 5px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 90%;
-  //border: 1px solid black;
+  width: 100%;
+  /*border: 1px solid black;*/
   z-index: 2;
 }
 
@@ -282,7 +286,7 @@ ul li a:visited {
   display: inline-block;
   z-index: -1;
   width: 130px;
-  height: 30px;
+  height: 50px;
 }
 
 .connectbar.left {
