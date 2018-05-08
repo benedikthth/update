@@ -108,6 +108,7 @@ class App extends Component {
 
             {/*<div className={"glowConceal " +colorScheme}></div>*/}
 
+            <p className="constructionNotice">This site is under construction.</p>
 
             <Tabs onSelect={ (ev)=>this.tabChange(ev) } selectedIndex={currentTab}>
               <TabList>
