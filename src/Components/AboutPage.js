@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Translate, { LocaleProvider, /*LocaleSwitch,*/ TranslateMaker } from 'react-translate-maker'
+import Translate from 'react-translate-maker'
 
 class AboutPage extends Component {
 
@@ -11,19 +11,19 @@ class AboutPage extends Component {
         return <div> 
 
             <h1>
-                This is the about page.
+                <Translate path="aboutPage.heading" />
             </h1>
 
             <p>
-                Here i'll put some info about myself.
+                <Translate path="aboutPage.firstParagraph" />
             </p>
 
             <p>
-                Some shit about my hobbies
+                <Translate path="aboutPage.secondParagraph" />
             </p>
             
             <p>
-                Some shit about my schoolwork
+                <Translate path="aboutPage.thirdParagraph" />
             </p>
             
 

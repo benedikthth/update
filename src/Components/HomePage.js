@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Translate from 'react-translate-maker';
+
 class HomePage extends Component {
 
  
@@ -11,11 +13,19 @@ class HomePage extends Component {
 
         return <div> 
             <h1>
-                This is the home page
+                <Translate path="homePage.heading" />
             </h1>
 
             <p>
-                Here i'll put some stuff about what this webpage is.
+                <Translate path="homePage.firstParagraph" />
+            </p>
+
+            <p>
+                <Translate path="homePage.secondParagraph" />
+            </p>
+
+            <p>
+                <Translate path="homePage.thirdParagraph" />
             </p>
 
         </div>

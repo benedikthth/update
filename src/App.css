@@ -51,24 +51,29 @@
 /*--------------------------------------------------*/
 
 .sideBar{
-  z-index: 1;
+
+  text-align: center;
+
   display: inline-block;
   position: fixed;
-  overflow: hidden;
+  overflow-x: hidden;
   
-  height: 10%;
-  width: 5%;
+  height: 100%;
+  width: 4%; /* */
+  z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   
-  background: darkslategray;
   left: 0px;
-  -webkit-transition: width  0.2s, height 0.2s; /* Safari */
-  transition: width  0.2s, height 0.2s;
-  color: wheat;
+  -webkit-transition: width  0.2s; /* Safari */
+  transition: width  0.2s;
+
 }
 
-.sideBar li a{
-  color: wheat;
+.sideBar.light {
+  background: var(--color-day-0);
+}
+.sideBar.dark {
+  background: var(--color-night-0);  
 }
 
 .sideBar.active { 
@@ -77,13 +82,9 @@
 }
 
 .sideBar:hover:not(.active) {
-  content: "/f26e";  /* this is your text. You can also use UTF-8 character codes as I do here */
-  font-family: FontAwesome;
-
+  width: 5%;
 }
 
-.main {
-}
 
 li:before {
   content: " | ";
@@ -95,10 +96,17 @@ li:before {
   position: fixed;
   right: 0px;
   height: 100%;
-  width: 95%;
+  width: 96%;
   display: inline-block;
-  color: snow;
   text-align: center;
+}
+
+.mainApp.light {
+  background: var(--color-light-pastel-1)
+}
+
+.mainApp.dark {
+  background: var(--color-dark-pastel-1)
 }
 
 
@@ -108,23 +116,3 @@ ul{
 }
 
 
-
-
-
-
-/*<SWITCHLOCALE>*/
-
-
-/*</SWITCHLOCALE>*/
-
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale3d(0.3, 0, 0);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}

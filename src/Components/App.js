@@ -1,34 +1,29 @@
 import 'babel-polyfill';
 import React, { Component } from 'react';
 import '../App.css';
-//import image from '../img/profile.jpg';
-//import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Translate, { LocaleProvider, /*LocaleSwitch,*/ TranslateMaker } from 'react-translate-maker'
-//import SwitchLocaleButton from './SwitchLocaleButton.js';
+import { LocaleProvider, TranslateMaker } from 'react-translate-maker';
 import Cookies from 'react-cookie';
 
 import Sidebar from './Sidebar';
 
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import { browserHistory } from 'react-router';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import PortfolioPage from './PortfolioPage';
-//import * as FontAwesome from 'react-icons/fa';
-/*
-var Github = require('react-icons/lib/fa/github'),
-    Linkedin = require('react-icons/lib/fa/linkedin'),
-    Email = require('react-icons/lib/fa/envelope-o'),
-    Moon = require('react-icons/lib/fa/moon-o'),
-    Sun = require('react-icons/lib/fa/sun-o');
-*/
-//Tabs.setUseDefaultStyles(false);
+
+import ColorSchemeProvider from '../ColorScheme/ColorSchemeProvider';
+
 
 class App extends Component {
 
   constructor(props, context){
     super(props, context);
+
+    const instance = ColorSchemeProvider.instance;
+    
+    instance.subscribe(this.colorSchemeChange.bind(this));
 
     let c_locale = Cookies.load('locale');
     let c_color = Cookies.load('color');
@@ -50,31 +45,37 @@ class App extends Component {
     };
     
   }
-  colorSchemeChange(){
-    var cs = (this.state.colorScheme === 'day')? 'night': 'day';
-    Cookies.save('color', cs);
+
+  
+  colorSchemeChange(colorScheme){
+    console.log('foo');
+    
+    Cookies.save('color', colorScheme);
     this.setState({
-      colorScheme: cs,
+      colorScheme: colorScheme,
       locale: this.state.locale
-    });
+    })
+
+    this.forceUpdate();
   }
+  
 
   handleLocaleChange(locale) {
-    console.log(locale);
+    //console.log(locale);
     Cookies.save('locale', locale);
     this.setState({
       colorScheme: this.state.colorScheme,
       locale: locale
     });
+    
   }
 
 
 
   render() {
-    const {data, locales} = this.props;
+    const {data} = this.props;
     const currentLocale = this.state.locale;
-    const colorScheme = this.state.colorScheme;
-    //const currentTab = this.state.currentTab;
+    
     const translate = new TranslateMaker({
       data: data,
     });
@@ -82,16 +83,15 @@ class App extends Component {
     return (
       <LocaleProvider translate={translate} locale={currentLocale} >
         <Router>
-          <div className="App">
+          <div className={`App ${ColorSchemeProvider.instance.scheme}`}>
 
             <Sidebar handleLocaleChange={this.handleLocaleChange.bind(this)} language={currentLocale}/>
 
-            <div className="mainApp">
+            <div className={`mainApp ${ColorSchemeProvider.instance.scheme}`}>
 
-              <Translate path="welcome" />
+              {/*<Translate path="welcome" />*/}
           
               <Route name="home" exact path="/" component={HomePage} />
-              <Route name="about" exact path="/about" component={AboutPage} />
               <Route name="portfolio" exact path="/portfolio" component={PortfolioPage} />
             
             </div>
@@ -99,6 +99,7 @@ class App extends Component {
           </div>
         </Router>
       </LocaleProvider>
+
     );
   }
 }
