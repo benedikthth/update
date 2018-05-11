@@ -8,6 +8,8 @@ import arty from '../img/artistic.jpg';
 
 import gaming from '../img/gaming.jpg';
 
+import webDesign from '../img/webdesign.jpg';
+
 class HomePage extends Component {
 
  
@@ -15,10 +17,8 @@ class HomePage extends Component {
 
     render(){
 
-        console.log(welcome);
         
-
-        return <div> 
+        return <div className="mainApp"> 
             <h1>
                 <Translate path="homePage.heading" />
             </h1>
@@ -39,6 +39,12 @@ class HomePage extends Component {
 
             <p>
                 <Translate path="homePage.gameDesigner" />
+            </p>
+
+            <div style={{backgroundImage: `url(${webDesign})`}} className="sectionImage" />
+
+            <p>
+                <Translate path="homePage.webDesign" />
             </p>
 
         </div>

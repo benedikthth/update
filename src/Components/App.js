@@ -85,11 +85,11 @@ class App extends Component {
 
         <Router>
 
-          <div className={`App ${ColorSchemeProvider.instance.scheme}`}>
+          <div className={`App`}>
 
             <Sidebar handleLocaleChange={this.handleLocaleChange.bind(this)} language={currentLocale}/>
 
-            <div className={`mainApp`}>
+            {/*<div className={`mainApp`}>*/}
 
               <Route name="home" exact path="/" component={HomePage} />
               <Route name="portfolio" exact path="/portfolio" component={PortfolioPage} />
@@ -97,7 +97,7 @@ class App extends Component {
            
             </div>
           
-          </div>
+          {/*</div>*/}
         
         </Router>
       

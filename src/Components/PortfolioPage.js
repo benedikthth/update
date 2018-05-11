@@ -8,7 +8,7 @@ class PortfolioPage extends Component {
 
         
 
-        return <div> 
+        return <div className="mainApp"> 
 
             <h1>
                 This is the portfolio page

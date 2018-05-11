@@ -22,7 +22,7 @@ export default {
         " Computer Graphics, or Artificial Intelligence." +
         "In my free time, I have made browser games, mobile games & interactive playthings.",
 
-      fourthParagraph:
+      webDesign:
         "I am also a web-design enthusiast, I like to think that I have a good eye for aesthetics," +
         " & user experience. During my studies at Reykjavik University i also put emphasis on front &"+
         " back-end development. I have experience with ReactJs, NodeJs & .NET. In fact, this website is "+
@@ -70,7 +70,7 @@ export default {
         "Frítími minn fer gjarnan í að gera tölvuleiki, símaleiki og gagnvirk leikföng.",
         
 
-      fourthParagraph:
+      webDesign:
         "Ég er áhugamaður um vefhönnun. Ég tel mig hafa gott skyn á "+
         ""
 

@@ -13,13 +13,12 @@
 
 }
 
-/*
-.App {
-  color: var(--color-text);
-  -webkit-transition: all  0.2s;     
-  transition: all  0.2s;      
-  
-}*/
+body, html {
+
+  min-height: 100%;
+  overflow: auto;
+
+}
 
 a { 
     color: var(--color-linkcolor);
@@ -38,7 +37,7 @@ ul{
 
 .sideBar{
   background-color: var(--color-sidebar);
-  box-shadow: -10px 0px 100px;  
+  
   text-align: center;    
   
   display: inline-block;  
@@ -117,24 +116,22 @@ ul.navLinks li a {
 
 /*--------------------------------------------------*/
 
+
 .mainApp{
-  
-  right: 0px;
-  height: 100%;
+  position: absolute;
+  margin-left: 4%;
+  min-height: 100%;
   width: 96%;
   display: inline-block;
   text-align: center;
-}
-
-.mainApp {
-  background-color: var(--color-bg);
+  background-color: var(--color-bg);  
 }
 
 
 .sectionImage  {  
-  position: static;
+  /*position: static;*/     
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 250px; 
   /* Create the parallax scrolling effect */
   background-attachment: fixed; 
   
@@ -155,6 +152,7 @@ ul.navLinks li a {
                                   supported by Chrome and Opera */
 }
 
+
 .App * {
   
     color: var(--color-text);
@@ -162,12 +160,14 @@ ul.navLinks li a {
 
   --t: 0.2s;
 
+  
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-transition: all var(--t); /* Safari */
-     -khtml-transition: all var(--t); /* Konqueror HTML */
-       -moz-transition: all var(--t); /* Firefox */
-        -ms-transition: all var(--t); /* Internet Explorer/Edge */
-            transition: all var(--t); /* Non-prefixed version, currently
-                                            supported by normal browsers*/
+  -webkit-transition: all var(--t); /* Safari */
+  -khtml-transition: all var(--t); /* Konqueror HTML */
+  -moz-transition: all var(--t); /* Firefox */
+  -ms-transition: all var(--t); /* Internet Explorer/Edge */
+  transition: all var(--t); /* Non-prefixed version, currently
+  supported by normal browsers*/
+  transition-timing-function: ease-in-out;
   
 }
