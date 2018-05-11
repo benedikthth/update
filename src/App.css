@@ -1,99 +1,124 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
 
 :root {
-  --color-primary-0: #204981;
-  --color-primary-1: #5177AB;
-  --color-primary-2: #365E96;
-  --color-primary-3: #133565;
-  --color-primary-4: #062046;
 
-  /*BLACK COLOR SCHEME*/
+  /* placeholders */
+  --color-bg:orange;
+  --color-sidebar: brown;
+  --color-text: cyan;
+  --color-linkcolor: gray;
+  --color-2: yellow;
+  
+  --borderStyle: dotted;
 
-  --color-dark-pastel-0: #203046; /**/
-  --color-dark-pastel-1: #425063; /*lighter*/
-  --color-dark-pastel-2: #2E3A4B; /**/
-  --color-dark-pastel-3: #14253C; /**/
-  --color-dark-pastel-4: #09182D; /**/
-
-  /*lighter pastelly*/
-
-  --color-light-pastel-0: #2C4870;
-  --color-light-pastel-1: #758AA8;
-  --color-light-pastel-2: #4C678C;
-  --color-light-pastel-3: #142F54;
-  --color-light-pastel-4: #051A38;
-
-
-
-  --color-day-0: #5BACD3;
-  --color-day-1: #B8E1F5;
-  --color-day-2: #84C5E5;
-  --color-day-3: #3A93BE;
-  --color-day-4: #1C79A7;
-  --color-day-text: black;
-  /*
-  --color-night-0: #150D78;
-  --color-night-1: #3D34B0;
-  --color-night-2: #1E1596;
-  --color-night-3: #0D0759;
-  --color-night-4: #050231;
-  */
-  --color-night-0: #2C4870;
-  --color-night-1: #758AA8;
-  --color-night-2: #4C678C;
-  --color-night-3: #142F54;
-  --color-night-4: #051A38;
-  --color-night-text: white;
 }
 
+/*
+.App {
+  color: var(--color-text);
+  -webkit-transition: all  0.2s;     
+  transition: all  0.2s;      
+  
+}*/
+
+a { 
+    color: var(--color-linkcolor);
+}
+
+.pdfDisplay{
+  height: 100%
+}
+
+ul{
+  list-style-type: none;
+}
 
 
 /*--------------------------------------------------*/
 
 .sideBar{
-
-  text-align: center;
-
-  display: inline-block;
-  position: fixed;
-  overflow-x: hidden;
+  background-color: var(--color-sidebar);
+  box-shadow: -10px 0px 100px;  
+  text-align: center;    
   
-  height: 100%;
-  width: 4%; /* */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  display: inline-block;  
+  position: fixed;    
   
-  left: 0px;
-  -webkit-transition: width  0.2s; /* Safari */
-  transition: width  0.2s;
-
-}
-
-.sideBar.light {
-  background: var(--color-day-0);
-}
-.sideBar.dark {
-  background: var(--color-night-0);  
-}
+  border-right: 2px var(--borderStyle) var(--color-text);  
+  
+  height: 100%;  
+  width: 4%; /* */    
+  z-index: 1; /* Stay on top */      
+  top: 0; /* Stay at the top */        
+  
+  left: 0px;  
+  
+}  
 
 .sideBar.active { 
   width: 20%;
-  height: 100%;
+  
+}
+
+.seperator {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  width: 100%;
+  border-bottom: 2px dashed var(--color-text);
+}
+
+img.profile {
+  width: 80%;
+  border-radius: 100%;
 }
 
 .sideBar:hover:not(.active) {
   width: 5%;
 }
 
-
-li:before {
-  content: " | ";
+.horizontalLayoutList {
+  width: 90%;
+  padding-left: 10%;
 }
+
+ul.horizontalLayoutList li {
+  position: relative;
+  left: 0px;
+  display: inline;
+}
+
+ul.horizontalLayoutList li + li:before {
+  content: " ~ ";
+}
+
+
+ul.navLinks {
+  padding-left: 10%;
+  /*text-align: left;*/
+  width: 90%;
+}
+
+ul.navLinks li:not(:last-child) {
+  border-bottom: 1px dotted var(--color-linkcolor);
+}
+
+ul.navLinks li {
+  margin-right: 5%;
+}
+
+ul.navLinks li a {
+  padding-left: 10px;
+}
+
+
+
 
 /*--------------------------------------------------*/
 
 .mainApp{
-  position: fixed;
+  
   right: 0px;
   height: 100%;
   width: 96%;
@@ -101,18 +126,48 @@ li:before {
   text-align: center;
 }
 
-.mainApp.light {
-  background: var(--color-light-pastel-1)
-}
-
-.mainApp.dark {
-  background: var(--color-dark-pastel-1)
+.mainApp {
+  background-color: var(--color-bg);
 }
 
 
-/* UL STYLES */
-ul{
-    list-style-type: none;
+.sectionImage  {  
+  position: static;
+  /* Set a specific height */
+  min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed; 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
 }
 
 
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.App * {
+  
+    color: var(--color-text);
+
+
+  --t: 0.2s;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-transition: all var(--t); /* Safari */
+     -khtml-transition: all var(--t); /* Konqueror HTML */
+       -moz-transition: all var(--t); /* Firefox */
+        -ms-transition: all var(--t); /* Internet Explorer/Edge */
+            transition: all var(--t); /* Non-prefixed version, currently
+                                            supported by normal browsers*/
+  
+}

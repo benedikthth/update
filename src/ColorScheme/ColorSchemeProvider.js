@@ -1,24 +1,42 @@
 const ColorSchemeProvider = {
     _instance: null,
 
+   
+
+
     get instance() {
 
       if (!this._instance) {
         this._instance = {
 
-          singletonMethod() {
-            return 'singletonMethod';
+
+          theme_light: {
+            backGround: "#C5D1EB",
+            sideBar:    "#92AFD7",
+            textColor:  "#1F2F16",
+            linkColor:  "#395B50",
+            color_2:    "#5A7684"
+      
+          },
+      
+          theme_dark: {
+            backGround: "#0A0908",
+            sideBar: " #22333B",
+            textColor: "#E5F4E3",
+            linkColor: "#A9927D",
+            color_2: "#4C4C4C"
           },
   
-          _colorScheme: 'light',
-          _subscriptions: [],
+          _colorScheme: 'light', //default value.
+          _subscriptions: [], //functions that listen to color change events.
 
           get scheme() {
             return this._colorScheme;
           },
   
           set scheme(value) {
-            this._type = value;
+            this._colorScheme = value;
+            this.update();
             this._notify();
           },
 
@@ -28,7 +46,22 @@ const ColorSchemeProvider = {
            */
           toggle(){
             this._colorScheme = (this._colorScheme === 'light')? 'dark': 'light';
+            this.update();
             this._notify();
+          },
+
+          update(){
+
+            var html = document.getElementsByTagName('html')[0];
+
+            let theme = (this._colorScheme === 'light')? this.theme_light: this.theme_dark;
+            
+            html.style.setProperty('--color-bg', theme.backGround);
+            html.style.setProperty('--color-sidebar', theme.sideBar);
+            html.style.setProperty('--color-text', theme.textColor);
+            html.style.setProperty('--color-linkcolor', theme.linkColor);
+            html.style.setProperty('--color-2', theme.color_2);
+
           },
 
           /**

@@ -4,13 +4,11 @@ import SwitchLocaleButton from './SwitchLocaleButton';
 
 import Translate from 'react-translate-maker'
 
-import ColorSchemeProvider from '../ColorScheme/ColorSchemeProvider';
-
-//import ColorSchemeProvider from '../ColorScheme/ColorSchemeProvider';
 import ChangeColorSchemeButton from './ChangeColorSchemeButton';
 
 import { Link } from 'react-router-dom';
-//fas fa-ellipsis-h
+
+import profile from '../img/profile.jpg';
 
 var Ellipsis = require('react-icons/lib/fa/ellipsis-h');
 
@@ -18,15 +16,12 @@ class SideBar extends Component {
     constructor(props, context){
         super(props, context);
         this.active = false;
-        //this.props = props;
-        console.log(props);
         
 
     }
 
     toggle() {
         
-        //console.log(ColorSchemeProvider.instance);
         this.active = !this.active;
         this.forceUpdate();
     }
@@ -35,36 +30,46 @@ class SideBar extends Component {
 
         if(!this.active){
         
-            return <div className={`sideBar ${this.active? "active": ""} ${ColorSchemeProvider.instance.scheme}`} onClick={this.toggle.bind(this)}>
-                <Ellipsis />
+            return <div className={`sideBar ${this.active? "active": ""} `} onClick={this.toggle.bind(this)}>
+                <Ellipsis className="icon" />
             </div>
         
         } else {
         
-            return <div className={`sideBar ${this.active? "active": ""} ${ColorSchemeProvider.instance.scheme}`} onClick={this.toggle.bind(this)}  >
+            return <div className={`sideBar ${this.active? "active": ""} `} onClick={this.toggle.bind(this)}  >
                 
+                <img src={profile} alt="My profile picture"  className="profile noselect"/>
 
+                <div className="seperator" />
 
-                <div className="horizontalLayoutGroup">
+                <ul className="horizontalLayoutList">
                     
-                    <ChangeColorSchemeButton />
-                    {" ~ "} 
-                    <SwitchLocaleButton click={this.props.handleLocaleChange} language={this.props.language}/> <br />
-
-                </div>
-
-
-                <ul id="headerButtons">
-                    <li className="navButton">
-                        <Link to=""><Translate path="homePage.link"/></Link>
+                    <li>
+                        <ChangeColorSchemeButton />
                     </li>
-                    {/*<li className="navButton"><Link to="about"><Translate path="aboutPage.link"/></Link></li>*/}
-                    <li className="navButton">
-                        <Link to="portfolio"><Translate path="portfolioPage.link"/></Link>
+                    
+                    <li>
+                        <SwitchLocaleButton click={this.props.handleLocaleChange} language={this.props.language}/> <br />
+                    </li>
+
+                </ul>
+
+                <div className="seperator" />
+
+                <ul className="navLinks">
+               
+                    <li >
+                        <Link className="noselect" to=""><Translate path="homePage.link"/></Link>
+                    </li>
+                   
+                    <li >
+                        <Link className="noselect" to="portfolio"><Translate path="portfolioPage.link"/></Link>
                     </li>   
-                    <li className="bavButton">
-                        <Link to="cv"><Translate path="cvPage.link" /></Link>
+                   
+                    <li >
+                        <Link className="noselect" to="cv"><Translate path="cvPage.link" /></Link>
                     </li>          
+               
                 </ul>
 
             </div>
