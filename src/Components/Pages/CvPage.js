@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CV from '../img/benedikt_cv.pdf';
+import CV from '../../img/benedikt_cv.pdf';
 
 class CvPage extends Component {
 

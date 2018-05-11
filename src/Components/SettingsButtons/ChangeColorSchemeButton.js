@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ColorSchemeProvider from '../ColorScheme/ColorSchemeProvider';
+import ColorSchemeProvider from '../../ColorScheme/ColorSchemeProvider';
 
 //import Translate, { LocaleProvider, /*LocaleSwitch,*/ TranslateMaker } from 'react-translate-maker'
 

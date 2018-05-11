@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import Translate from 'react-translate-maker';
 
-import welcome from '../img/welcome.jpg';
+import welcome from '../../img/welcome.jpg';
 
-import arty from '../img/artistic.jpg';
+import arty from '../../img/artistic.jpg';
 
-import gaming from '../img/gaming.jpg';
+import gaming from '../../img/gaming.jpg';
 
-import webDesign from '../img/webdesign.jpg';
+import webDesign from '../../img/webdesign.jpg';
 
 class HomePage extends Component {
 
