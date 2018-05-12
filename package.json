@@ -8,9 +8,10 @@
     "react-cookie": "^1.0.5",
     "react-dom": "^15.4.2",
     "react-icons": "^2.2.3",
-    "react-tabs": "^0.8.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-translate-maker": "^0.4.4",
-    "translate-maker": "^0.5.9"
+    "translate-maker": "^0.5.15"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

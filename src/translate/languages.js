@@ -1,90 +1,124 @@
 export default {
   en_US:{
     welcome:'Welcome to spock.is',
-    changeScheme: 'Change Scheme',
-    tabs:{
-      introduction: {
 
-        label: "Introduction",
-        titleText: "A brief introduction to myself",
-        summary: `I am a student of computer science at Reykjavík University.
-        Over my studies I have gained experience in game design, web-design, artificial intelligence
-        webservices and embedded systems & IOT technology,
-        as well as a vide vareiety of programming languages,
-        such as javascript, C, C++, C# and Java to name a few.`,
+    sidebar: {
+      settings: 'Settings',
+      contact: 'Contact me'
+    },
 
-        interests: `I am super interested in video games. And indeed, games as a concept overall, having played
-        games such as World of Warcraft, League Of Legends and Eve Online to name a few, and I have even made
-        games of my own. I also enjoy all things web-design related,
-        especially learning what makes or breaks a website.`,
-        hobbies: `I am an amateur artist. My preferred medium is acrylic paint, but i also paint in oil, or draw with pencils and pens.
-        As stated above, I am also an amateur game designer. I have been making games, knowingly or unknowingly ever since i
-        started my studies at Reykjavik University. As of now I have even made a full game for Android smart phones using Unity.`
+    homePage: {
+      link: 'Home',
+      heading: 'Welcome to Spock.is',
 
-      },
-      links: {
-        label: "Portfolio",
-        titleText: "This is a list of some of the websites i've made.",
-        links: {
-          procedural: "A procedurally generated game map.",
-          sudoku: "A simple sudoku checker.",
-          space: "A simple space shooter game made in javascript.",
-          painter: "A painting application made for a webprogramming course.",
-          flappy: "A flappy-bird clone made for the same webprogramming course.",
-          wheel: "A lucky wheel application"
-        }
+      introduction: 
+        'My name is Benedikt Hólm Þórðarson.'+
+        'This is my personal homepage. Here you can find information' +
+        ' about me, my resume & my portfolio.',
 
-      },
-      contact: {
-        label: "Contact me",
-        titleText: "",
-        links: {
-          github:"Github",
-          linkedIn: "linkedIn",
-          email: "benedikthth@gmail.com"
-        }
-      }
+      hobbies:
+
+        'I am an Icelandic Computer Scientist, aspiring Game Designer,'+
+        ' programmer, web designer, amateur artist, cat person, passable cook and more.' +
+        ' In my free time i solve jigsaw puzzles, play video games, read, paint and draw.'+
+        ' I love trying out new things, so I seldom find myself bored.',
+
+      gameDesigner: 
+        'I am an aspiring game designer. During my studies at Reykjavik University' + 
+        ' I focued on courses connected to game design, such as Game Design, Advanced Game Design,'+
+        ' Computer Graphics, and Artificial Intelligence.' +
+        ' In my free time, I have made browser games, mobile games & interactive playthings.'+
+        ' I am constantly trying to learn more about game design, I tend to read a lot of books and consume'+
+        ' a lot of media about game design.',
+
+      webDesign:
+        'I am also a web-design enthusiast, I like to think that I have a good eye for aesthetics,' +
+        ' & user experience. During my studies at Reykjavik University i also put emphasis on front &'+
+        ' back-end development. I have experience with ReactJs, NodeJs, Angular & .NET. In fact, this website is'+
+        ' written in React. As a medium, I feel like the browser can be a really fun & powerful way to bring your'+
+        ' creativity to a wide audience.', 
+
+      fifthParagraph:
+        ''
+
+    }, 
+    
+    
+    cvPage: {
+      link: 'Curriculum Vitae'
+    },
+    
+    
+    portfolioPage: {
+      link: 'Portfolio',
+      csp: 'A binary puzzle solver.',
+      procedural: 'A procedural map generator.',
+      sudoku: 'A simple sudoku checker.',
+      spaceShooter: 'A simple space shooter game.',
+      painter: 'A painting application.'
+
     }
+    
   },
+
+  _:{_:'-------------------------------------------------------------------------'},
+
   is_IS:{
     welcome:'Velkomin á spock.is',
-    changeScheme: 'Change Scheme',
-    tabs:{
-      introduction: {
-        label: "Um mig",
-        titleText: "Stutt lýsing um sjálfan mig",
-        summary: `Ég er nemandi við tölvunarfræði í Háskólanum í Reykjavík.
-        Við námið hef ég öðlast reynslu meðal annars við leikjahönnun, vefhönnun, gervigreind,
-        vefþjónustur og IOT jaðartækni. Ég hef einnig náð færni við ýmis forritunarmál, til dæmis
-        Javascript, C, C++, C# og Java.`,
-        interests: `Ég er mikill tölvuleikjaáhugamaður. Ég hef spilað ýmisa leiki eins og World of Warcraft,
-         League of Legends og Eve Online. Ég hef einnig búið til egin tölvuleiki, til dæmis fyrir snjallsíma sem keyra Android.`,
-        hobbies: `Ég er amatör listamaður, ég mála mest með akrýlmálingu, en hef líka notað olíu, blýant og penna.
-        Einnig er ég byrjandi í leikjahönnun. Ég hef gert leiki allt síðan ég byrjaði í tölvunarfræðinni í Háskólanum í Reykjavik.
-        Mitt stærsta afrek í leikjahönnun er símaleikur sem gerir vefsíðuna reddit.com leikna. Leikurinn er fyrir Android gerður í Unity.`
-      },
-      links: {
-        label: "Portfolio",
-        titleText: "Hér eru dæmi um vefsíður sem ég hef búið til.",
-        links: {
-          procedural: "Tölvuleikjakort sem verður til við rauntíma.",
-          sudoku: "Einfalt Sudoku forrit",
-          space: "Einfadur leikur þar sem þú flýgur geimskipi og skýtur óvini.",
-          painter: "Teikniforrit sem var gert fyrir námskeið í vefforritun.",
-          flappy: "´flappy-bird´ forrit sem var gert fyrir sama vefforritunar námskeið.",
-          wheel: "Lukkuhjól"
-        }
 
-      },
-      contact: {
-        label: "Hafðu samband",
-        titleText: "Hafðu samband við mig í gegnum eftirfarandi:",
-        links: {
-          github:"Github",
-          linkedIn: "linkedIn",
-          email: "benedikthth@gmail.com"
-        }
-      }
+    sidebar: {
+      settings: 'Stillingar',
+      contact: 'Vertu í bandi'
+    },
+    
+    homePage: {
+      link: 'Heim',
+      heading: 'Velkomin á Spock.is',
+
+      introduction: 
+        'Ég heiti Benedikt Hólm Þórðarson, og þetta er persónulega vefsíðan mín.'+
+        ' Hérna er að finna upplýsingar um mig, ferilskrána mína og safn af verkefnum.'+
+        '',
+
+      hobbies: 
+        'Ég er íslenskur tölvunarfræðingur, áhugamaður um leikjahönnun,'+
+        ' forritari, vefhönnuður, amatör'+
+        ' listamaður, kattaunnandi, ágætur kokkur og fleira. Í frítíma mínum leysi ég'+
+        ' púsluspil, spila tölvuleiki, les, mála og teikna. Ég er rosalega góður að finna mér dægradvöl'+
+        ' þannig að mér leiðist sjaldan.',
+      
+
+      gameDesigner: 
+        'Ég stefni á leikjahönnun. Við námið í HR einbeitti ég mér að áföngum sem snerust að leikjahönnun.'+
+        ' Til dæmis Leikjahönnun, Áframhald Leikjahönnunar, Tölvugrafík og Gervigreind.' +
+        ' Frítími minn fer gjarnan í að gera tölvuleiki, símaleiki og gagnvirk leikföng. Ég reyni stöðugt'+
+        ' að afla mér frekari þekkingar, þannig að ég les og horfi á mikið af efni um leikjahönnun.',
+        
+
+      webDesign:
+        'Ég er áhugamaður um vefhönnun. Ég tel mig hafa gott auga fyrir '+
+        ' útliti og notendareynslu. Við nám mitt við háskólann í reykjavík setti ég áherslu á' +
+        ' áfanga sem snertu við vefhönnun, bæði fram og bakenda. Ég hef reynslu af ReactJs, NodeJs, Angular'+
+        ' og .NET. Þess má geta að þessi vefsíða er skrifuð með React. Sem miðill finnst mér vafrinn vera öflugt og'+
+        ' og skemmtilegt tól til að láta sköpunargáfuna njóta sín.'
+
+    },
+    
+
+    cvPage: {
+      link: 'Ferilskrá'
+    },
+    
+
+    portfolioPage: {
+      link: 'Verkasafn',
+      csp: 'Tvíundarpúsluspils leysir.',
+      procedural: 'Kort gert á rauntíma.',
+      sudoku: 'Sudoku yfirferð',
+      spaceShooter: 'Einfaldur geim leikur.',
+      painter: 'Teikniforrit í vafra.'
+
     }
-  },
+
+  }
 };

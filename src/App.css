@@ -1,361 +1,276 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+
+
+
+
+.App *  {
+  
+  color: var(--color-text);
+
+
+  --t: 0.2s;
+
+  
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-transition: all var(--t); /* Safari */
+  -khtml-transition: all var(--t); /* Konqueror HTML */
+  -moz-transition: all var(--t); /* Firefox */
+  -ms-transition: all var(--t); /* Internet Explorer/Edge */
+  transition: all var(--t); /* Non-prefixed version, currently
+  supported by normal browsers*/
+  transition-timing-function: ease-in-out;
+  
+}
 
 :root {
-  --color-primary-0: #204981;
-  --color-primary-1: #5177AB;
-  --color-primary-2: #365E96;
-  --color-primary-3: #133565;
-  --color-primary-4: #062046;
 
-  /*BLACK COLOR SCHEME*/
+  /* placeholders */
+  --color-bg:orange;
+  --color-sidebar: brown;
+  --color-text: cyan;
+  --color-linkcolor: gray;
+  --linkEffectColor: yellow;
+  
+  --borderStyle: dashed;
 
-  --color-dark-pastel-0: #203046; /**/
-  --color-dark-pastel-1: #425063; /*lighter*/
-  --color-dark-pastel-2: #2E3A4B; /**/
-  --color-dark-pastel-3: #14253C; /**/
-  --color-dark-pastel-4: #09182D; /**/
+}
 
-  /*lighter pastelly*/
+.App {
+  
+  font-family: 'josefin Slab';
+  font-size: 3vh;
+  color: var(--color-text);
+}
 
-  --color-light-pastel-0: #2C4870;
-  --color-light-pastel-1: #758AA8;
-  --color-light-pastel-2: #4C678C;
-  --color-light-pastel-3: #142F54;
-  --color-light-pastel-4: #051A38;
+a { 
+  font-family: 'Amatic SC';
+  color: var(--color-linkcolor);
+}
 
+body, html {
 
+  min-height: 100%;
+  overflow: auto;
 
-  --color-day-0: #5BACD3;
-  --color-day-1: #B8E1F5;
-  --color-day-2: #84C5E5;
-  --color-day-3: #3A93BE;
-  --color-day-4: #1C79A7;
-  --color-day-text: black;
-  /*
-  --color-night-0: #150D78;
-  --color-night-1: #3D34B0;
-  --color-night-2: #1E1596;
-  --color-night-3: #0D0759;
-  --color-night-4: #050231;
-  */
-  --color-night-0: #2C4870;
-  --color-night-1: #758AA8;
-  --color-night-2: #4C678C;
-  --color-night-3: #142F54;
-  --color-night-4: #051A38;
-  --color-night-text: white;
 }
 
 
-.changeColorScheme.day{
-  background-color: var(--color-day-4);
-  border-color: var(--color-day-1);
-
-
-}
-.changeColorScheme.night{
-  background-color: var(--color-night-1);
-  border-color: var(--color-night-2);
+.pdfDisplay{
+  height: 100%
 }
 
-
-.changeColorScheme {
-  border-style: solid solid solid none;
-  border-radius: 0px 4px 4px 0px;
-  float:left;
-}
-
-
-body * {
-  transition: background-color 0.5s ease-in-out;
-  font-family: 'Josefin Slab', serif;
-}
-
-/*background*/
-.background.day{
-  background-color: var(--color-day-0);
-}
-.background.night{
-  background-color: var(--color-night-0);
-}
-.background{
-  position: absolute;
-  height: 100%;
-  overflow-y: hidden;
-  width: 100%;
-}
-
-
-
-/* ========================================================================== */
-
-.glowConceal{
-  height: 2.8em;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-}
-
-.App-header {
-  height: 150px;
-  padding: 20px;
-  margin-bottom: 0px;
-}
-.App-header.day{
-  background-color: var(--color-day-2);
-  border-bottom: var(--color-day-2) solid 2px;
-}
-.App-header.night{
-  background-color: var(--color-night-3);
-  border-bottom: var(--color-night-2) solid 2px;
-}
-/* ========================================================================== */
-
-
-/* UL STYLES */
 ul{
-    list-style-type: none;
+  list-style-type: none;
 }
 
-ul.day li{
-  background-color: var(--color-day-2);
-}
-ul.day li:hover {
-  background-color: var(--color-day-1);
-}
-ul.night li{
-  background-color: var(--color-night-2);
-}
-ul.night li:hover{
-   background-color: var(--color-night-1);
-}
-ul li{
-  padding: 10px 10px 10px 10px;
-  margin: 5px 0px 0px 0px;
-  border-radius: 1em;
+
+/*--------------------------------------------------*/
+
+.sideBar{
+
+  font-size: 2vw;
+
+  background-color: var(--color-sidebar);
+  
+  text-align: center;    
+  
+  display: inline-block;  
+  position: fixed;    
+  
+  border-right: 2px var(--borderStyle) var(--color-text);  
+  
+  height: 100%;  
+  width: 4%; /* */    
+  z-index: 1; /* Stay on top */      
+  top: 0; /* Stay at the top */        
+  
+  left: 0px;  
+  
+}  
+
+.sideBar.active { 
+  width: 20%;
+  
 }
 
-ul.day li a{
-  color: var(--color-day-text);
+.seperator {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  width: 100%;
+  border-bottom: 2px dashed var(--color-text);
 }
-ul.night li a{
-  color: var(--color-night-text);
-  /*color: var(--color-night-1);*/
+
+img.profile {
+  width: 80%;
+  border-radius: 100%;
 }
-ul li a {
+
+.sideBar:hover:not(.active) {
+  width: 5%;
+}
+
+.horizontalLayoutList {
+  text-align: center;
+  width: 85%;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+ul.horizontalLayoutList li {
+  display: inline;
+  padding: 5px;
+}
+
+ul.horizontalLayoutList li:hover {
+  color: var(--linkEffectColor);
+  font-size: 3vh;
+  background-color: var(--linkEffectColor);
+  border-radius: 10%;
+}
+
+
+
+ul.navLinks {
+  padding-left: 10%;
+  /*text-align: left;*/
+  width: 90%;
+  text-align: left;
+  font-size: 3.0vh;
+}
+
+
+.panelHeading {
+  font-size: 3vw;
+  padding: 2vh;
+  margin: 0%;
+}
+
+.settingsPanel {
+
+}
+
+
+ul.navLinks li {
+  height: 5%;
+  margin-right: 5%;
+}
+
+ul.navLinks li {
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+ul.navLinks li a {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
 }
-ul li a:visited {
-
-}
-/*UL LI STYLES*/
 
 
-.App.day{
-  background-color: var(--color-day-0);
-  color: var(--color-day-text);
+.navLinks li a {
+	/*border-top: 2px solid var(--color-2);*/
+	color: var(--color-linkcolor);
+	text-shadow: none;
+} 
+
+.navLinks li a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 0;
+	border-bottom: 2px solid #fff;
+	color: #fff;
+  content: attr(data-hover);
+  overflow: hidden;
+
+  white-space: nowrap;
+
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
 }
-.App.night{
-  background-color: var(--color-night-0);
-  color: var(--color-night-text);
+
+.navLinks li a:hover::before,
+.navLinks li a:focus::before {
+  max-width: 100%;
+  
 }
-.App {
+
+
+
+ul.doubleColumn {
   text-align: center;
+  padding: 0;
+  margin: auto;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  
 }
 
-.App-profile {
-  transition: all 1s ease;
-  height: 80px;
-  border-radius: 5px;
-  float:left;
-}
-
-.App-profile:hover {
-  transition: all 1s ease;
-  filter: blur(1px);
-}
+/*--------------------------------------------------*/
 
 
-
-.App-intro {
-  font-size: large;
-}
-
-
-.faicon {
-  float: left;
-}
-/*</LI>*/
-
-
-/*<TABS>*/
-
-
-.ReactTabs__TabList{
-  position: relative;
-  z-index: 3;
-  padding: 0px 0px 0px 0px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.mainApp{
+  position: absolute;
+  margin-left: 4%;
+  min-height: 100%;
+  width: 96%;
   display: inline-block;
+  text-align: center;
+  background-color: var(--color-bg);  
 }
 
 
-/*REACT TABS*/
-.tabSection.day .ReactTabs__TabPanel{
-  /*
-  color: var(--color-day-text);
-  background-color: var(--color-day-1);
-  box-shadow: 0px 10px 60px var(--color-day-4);
-  border-bottom: 4px double var(--color-day-4);
-  */
-}
-.tabSection.night .ReactTabs__TabPanel{
-  /*
-  color: var(--color-night-text);
-  background-color: var(--color-night-0);
-  box-shadow: 0px 10px 60px var(--color-night-4);
-  border-bottom: 4px double var(--color-night-2);
-  */
+.sectionImage  {  
+  /*position: static;*/     
+  /* Set a specific height */
+  min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed; 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
 }
 
+.contactItem {
+  font-size: 3vw; 
+}
 
-
-.ReactTabs__TabPanel{
+.contactItem svg {
   position: relative;
-  z-index: 0;
-  display: block;
-  margin-top: -0.3em;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-
-  border-radius: 0em 0em 1em 1em;
-  padding: 10px 30px 10px 30px;
-  animation: zoomIn 0.3s;
-}
-/*TAB PANELS*/
-.tabSection{/*
-  transform: translateY(-62px);
-  */
-  transform: translateY(-3.1em);
+  left: 0vw;
+  top: 0vw;
+  font-size: 3vw;
+  -webkit-filter: drop-shadow( 1px 1px 1px var(--color-text) ); 
+            filter: drop-shadow( 1px 1px 1px var(--color-text) );
 }
 
-.constructionNotice {
-  color: #051A38;
-  background: #FF0000;
-}
+.contactItem:hover svg {
+  transition: 1s;
+  left: -0.5vw;
+  top: -0.5vw;
 
-.paragraph:nth-child(odd) {
-
-}
-
-.paragraph:nth-child(even) {
-
-}
-
-.paragraph {
-
-  padding: 5px 5px 5px 5px;
-  width: 100%;
-  /*border: 1px solid black;*/
-  z-index: 2;
-}
-
-.tabSection.day .paragraph{
-  background-color: var(--color-day-1);
-}
-
-.tabSection.night .paragraph {
-  background-color: var(--color-night-1);
-
-}
-
-.tabSection.day .connectbar{
-  background-color: var(--color-day-1);
-}
-
-.tabSection.night .connectbar {
-  background-color: var(--color-night-1);
-
-}
-
-.connectbar {
-  position: relative;
-  display: inline-block;
-  z-index: -1;
-  width: 130px;
-  height: 50px;
-}
-
-.connectbar.left {
-  right: 10%;
-  transform: rotate(65deg);
-}
-
-.connectbar.right {
-  left: 10%;
-  transform: rotate(-65deg);
-}
-
-.tabSection.day .ReactTabs__Tab{
-  background-color: var(--color-day-0);
-  border: 2px solid var(--color-day-1);
-}
-.tabSection.night .ReactTabs__Tab{
-  background-color: var(--color-night-2);
-  border: 2px solid var(--color-night-0);
-}
-.ReactTabs__Tab {
-  transition: background-color 0.1s ease-in-out;
-  float:left;
-  display: inline;
-  padding: 10px 10px 13px 10px;
-  /*border-radius: 5px 5px 0px 0px;*/
-  border-radius: 0px 0px 0px 0px;
-  border-style: solid hidden solid solid;
+  -webkit-filter: drop-shadow( 5px 5px 10px  var(--color-text) ); 
+            filter: drop-shadow( 5px 5px 10px  var(--color-text));
 }
 
 
-
-.tabSection.day .ReactTabs__Tab--selected{
-  background-color: var(--color-day-3);
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
-.tabSection.night .ReactTabs__Tab--selected{
-  background-color: var(--color-night-0);
-}
-/*</TABS>*/
-
-/*<SWITCHLOCALE>*/
-.SwitchLocaleButton {
-  transition: background-image 1s ease-in-out;
-  float: right;
-  background-color: var(--color-light-pastel-1);
-  height: 40px;
-  width: 60px;
-  border-radius: 5px;
-}
-.slb_ice {
-  background-image: url(translate/iceland.png);
-  background-position:center;
-  background-size: cover;
-}
-.slb_us {
-  background-image: url(translate/us.png);
-  background-position:center;
-  background-size: cover;
-}
-/*</SWITCHLOCALE>*/
-
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale3d(0.3, 0, 0);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
+                                
