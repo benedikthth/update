@@ -31,7 +31,7 @@
   --color-sidebar: brown;
   --color-text: cyan;
   --color-linkcolor: gray;
-  --color-2: yellow;
+  --linkEffectColor: yellow;
   
   --borderStyle: dashed;
 
@@ -40,6 +40,7 @@
 .App {
   
   font-family: 'josefin Slab';
+  font-size: 3vh;
   color: var(--color-text);
 }
 
@@ -68,6 +69,9 @@ ul{
 /*--------------------------------------------------*/
 
 .sideBar{
+
+  font-size: 2vw;
+
   background-color: var(--color-sidebar);
   
   text-align: center;    
@@ -124,9 +128,9 @@ ul.horizontalLayoutList li {
 }
 
 ul.horizontalLayoutList li:hover {
-  color: var(--color-2);
+  color: var(--linkEffectColor);
   font-size: 3vh;
-  background-color: var(--color-2);
+  background-color: var(--linkEffectColor);
   border-radius: 10%;
 }
 
@@ -142,7 +146,7 @@ ul.navLinks {
 
 
 .panelHeading {
-  font-size: 3vh;
+  font-size: 3vw;
   padding: 2vh;
   margin: 0%;
 }
@@ -202,7 +206,9 @@ ul.navLinks li a {
 
 
 ul.doubleColumn {
-
+  text-align: center;
+  padding: 0;
+  margin: auto;
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
@@ -226,7 +232,7 @@ ul.doubleColumn {
 .sectionImage  {  
   /*position: static;*/     
   /* Set a specific height */
-  min-height: 250px; 
+  min-height: 500px; 
   /* Create the parallax scrolling effect */
   background-attachment: fixed; 
   
@@ -236,12 +242,25 @@ ul.doubleColumn {
 }
 
 .contactItem {
-  font-size: 3vw;
+  font-size: 3vw; 
 }
 
-.contactItem::after{
-	position: absolute;
-  content: attr("to");
+.contactItem svg {
+  position: relative;
+  left: 0vw;
+  top: 0vw;
+  font-size: 3vw;
+  -webkit-filter: drop-shadow( 1px 1px 1px var(--color-text) ); 
+            filter: drop-shadow( 1px 1px 1px var(--color-text) );
+}
+
+.contactItem:hover svg {
+  transition: 1s;
+  left: -0.5vw;
+  top: -0.5vw;
+
+  -webkit-filter: drop-shadow( 5px 5px 10px  var(--color-text) ); 
+            filter: drop-shadow( 5px 5px 10px  var(--color-text));
 }
 
 

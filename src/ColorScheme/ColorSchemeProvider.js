@@ -9,7 +9,7 @@ const ColorSchemeProvider = {
       if (!this._instance) {
         this._instance = {
 
-
+          /*
           theme_light: {
             backGround: "#C5D1EB",
             sideBar:    "#92AFD7",
@@ -17,14 +17,22 @@ const ColorSchemeProvider = {
             linkColor:  "#395B50",
             color_2:    "#5A7684"
       
-          },
+          },*/
+          theme_light: {
+            sideBar:    "#CBA46E",
+            backGround: "#F3F0EA",
+            textColor:  "#44333E",
+            linkColor:  "#A2636B",
+            linkEffectColor:    "#878E95"
       
+          },
+
           theme_dark: {
             backGround: "#0A0908",
             sideBar: " #22333B",
             textColor: "#E5F4E3",
             linkColor: "#A9927D",
-            color_2: "#4C4C4C"
+            linkEffectColor: "#4C4C4C"
           },
   
           _colorScheme: 'light', //default value.
@@ -60,7 +68,7 @@ const ColorSchemeProvider = {
             html.style.setProperty('--color-sidebar', theme.sideBar);
             html.style.setProperty('--color-text', theme.textColor);
             html.style.setProperty('--color-linkcolor', theme.linkColor);
-            html.style.setProperty('--color-2', theme.color_2);
+            html.style.setProperty('--linkEffectColor', theme.linkEffectColor);
 
           },
 

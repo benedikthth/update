@@ -10,8 +10,8 @@ import '../App.css';
 import Sidebar from './Sidebar/Sidebar';
 
 import HomePage      from './Pages/HomePage';
-import PortfolioPage from './Pages/PortfolioPage';
-import CvPage        from './Pages/CvPage';
+import PortfolioPage from './Pages/PortfolioPage/PortfolioPage';
+import CvPage        from './Pages//CvPage';
 
 import ColorSchemeProvider from '../ColorScheme/ColorSchemeProvider';
 import LanguageProvider from '../translate/LanguageProvider';

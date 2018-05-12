@@ -12,13 +12,12 @@ class ContactItem extends Component {
 
     render(){
 
-        const { Icon, tp, to } = this.props;
+        const { Icon, to } = this.props;
         
-        const { t } = this.context;
-
-    
-            return <a href={to} tp={to} className="contactItem" > <Icon /> </a>
-            
+        return <a href={to}  className="contactItem" > 
+            <Icon />
+        </a>
+                
         
     }
 

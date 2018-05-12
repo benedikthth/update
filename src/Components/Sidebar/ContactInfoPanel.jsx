@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import { LocaleProvider   } from 'react-translate-maker'
-import provideTranslations from 'react-translate-maker/dist/provideTranslations';
+//import provideTranslations from 'react-translate-maker/dist/provideTranslations';
 
 import ContactItem from './ContactItem';
 
@@ -27,11 +27,23 @@ class ContactInfoPanel extends Component {
 
 
             <ul className='doubleColumn'>
-                <li><ContactItem Icon={Linkedin} to="https://www.linkedin.com/in/bennijesus/" /></li>
-                
-                <li><ContactItem Icon={Github} to="https://github.com/benedikthth" /></li>
-                <li><ContactItem Icon={Twitter} to="https://www.linkedin.com/in/bennijesus/" /></li>
-                <li><ContactItem Icon={Email} to="mailto:b@spock.is" /></li>
+
+                <li>
+                    <ContactItem Icon={Linkedin} to="https://www.linkedin.com/in/bennijesus/" />
+                </li>
+
+                <li>
+                    <ContactItem Icon={Github} to="https://github.com/benedikthth" />
+                </li>
+
+                <li>
+                    <ContactItem Icon={Twitter} to="https://www.linkedin.com/in/bennijesus/" />
+                </li>
+
+                <li>
+                    <ContactItem Icon={Email} to="mailto:b@spock.is" />
+                </li>
+
             </ul>
 
 

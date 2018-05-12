@@ -9,7 +9,7 @@ import ContactInfoPanel from './ContactInfoPanel';
 
 
 import { LocaleProvider   } from 'react-translate-maker'
-import provideTranslations from 'react-translate-maker/dist/provideTranslations';
+//import provideTranslations from 'react-translate-maker/dist/provideTranslations';
 
 
 import { Link } from 'react-router-dom';
