@@ -274,3 +274,31 @@ ul.doubleColumn {
                                   supported by Chrome and Opera */
 }
                                 
+/*  portfolio */
+
+.portfolioList{
+
+  margin: auto;
+
+  -webkit-filter: drop-shadow( 0px 0px 1px var(--color-text) ); 
+            filter: drop-shadow( 0px 0px 1px var(--color-text) );
+  width: 20vw;
+}
+
+.portfolioList li + li { 
+  padding-top: 1vw;
+}
+
+.portfolioItem {
+  border-radius: 5%;
+  background-color: var(--color-sidebar);
+}
+
+.portfolioItem img{
+  border-radius: 5% 5% 0% 0%;
+  max-width: 100%;
+ }
+
+.portfolioItem a {
+  display: block;
+}

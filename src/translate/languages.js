@@ -53,8 +53,8 @@ export default {
       link: 'Portfolio',
       csp: 'A binary puzzle solver.',
       procedural: 'A procedural map generator.',
-      sudoku: 'A simple sudoku checker.',
       spaceShooter: 'A simple space shooter game.',
+      sudoku: 'A simple sudoku checker.',
       painter: 'A painting application.'
 
     }
