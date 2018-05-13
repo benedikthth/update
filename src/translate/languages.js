@@ -51,6 +51,7 @@ export default {
     
     portfolioPage: {
       link: 'Portfolio',
+      intro: 'Here is a list of projects i have taken on, both in my free time and in school.',
       csp: 'A binary puzzle solver.',
       procedural: 'A procedural map generator.',
       spaceShooter: 'A simple space shooter game.',
@@ -112,6 +113,7 @@ export default {
 
     portfolioPage: {
       link: 'Verkasafn',
+      intro: 'Hérna er hægt að sjá safn af verkefnum sem ég hef gert, bæði í frítíma, og í skólanum.',
       csp: 'Tvíundarpúsluspils leysir.',
       procedural: 'Kort gert á rauntíma.',
       sudoku: 'Sudoku yfirferð',

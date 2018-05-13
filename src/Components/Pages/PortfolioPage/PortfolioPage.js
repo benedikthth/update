@@ -27,11 +27,11 @@ class PortfolioPage extends Component {
         return <div className="mainApp"> 
 
             <h1>
-                This is the portfolio page
+                {t('portfolioPage.intro', '')}
             </h1>
 
             <ul className="portfolioList">
-            
+
                 <li>
                     <PortfolioItem image={solver} text={t('portfolioPage.csp', '')} to={"http://www.code.spock.is/csp"} />
                 </li>
