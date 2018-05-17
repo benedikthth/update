@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { LocaleProvider, TranslateMaker } from 'react-translate-maker';
 import Cookies from 'react-cookie';
 
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { HashRouter as Router, Route, Switch} from 'react-router-dom';
 
 import '../App.css';
 
@@ -15,6 +15,7 @@ import CvPage        from './Pages//CvPage';
 
 import ColorSchemeProvider from '../ColorScheme/ColorSchemeProvider';
 import LanguageProvider from '../translate/LanguageProvider';
+import NotFoundPage from './Pages/NotFound';
 
 
 
@@ -82,11 +83,12 @@ class App extends Component {
           <div className={`App`}>
               <Sidebar handleLocaleChange={this.handleLocaleChange.bind(this)} language={currentLocale} />
 
-
+              <Switch>
               <Route exact path={'/'} component={HomePage} />
               <Route exact path="/portfolio" component={PortfolioPage} />
               <Route exact path="/cv" component={CvPage} />
-           
+              <Route component={NotFoundPage} />
+              </Switch>
             </div>
           
           {/*</div>*/}

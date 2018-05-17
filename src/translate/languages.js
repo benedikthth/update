@@ -59,7 +59,9 @@ export default {
       sudoku: 'A simple sudoku checker.',
       painter: 'A painting application.'
 
-    }
+    },
+    
+    notFound: 'You have now boldly gone where no man has gone before on this website. This sector of space does not exist.'
     
   },
 
@@ -122,7 +124,10 @@ export default {
       spaceShooter: 'Einfaldur geim leikur.',
       painter: 'Teikniforrit í vafra.'
 
-    }
+    },
+    
+    notFound: 'Þessi partur af síðunni er ekki (ennþá) til!'
+
 
   }
 };
