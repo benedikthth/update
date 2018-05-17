@@ -45,7 +45,9 @@ export default {
     
     
     cvPage: {
-      link: 'Curriculum Vitae'
+      link: 'Curriculum Vitae',
+      error: `Your browser does not seem to be able to handle PDF's. You can instead download my CV here.`,
+      download: 'download'
     },
     
     
@@ -110,7 +112,9 @@ export default {
     
 
     cvPage: {
-      link: 'Ferilskrá'
+      link: 'Ferilskrá',
+      error: `Vafrinn þinn virðist ekki hafa innbygðann PDF lesara. Þú getur hinsvegar náð í ferilskránna`,
+      download: 'Hala Niður'
     },
     
 
