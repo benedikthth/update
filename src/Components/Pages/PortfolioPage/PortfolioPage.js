@@ -10,7 +10,7 @@ import painter from '../../../img/portfolio/painter.PNG';
 import map from '../../../img/portfolio/map.png';
 import spacegame from '../../../img/portfolio/spacegame.png';
 import sudoku from '../../../img/portfolio/sudoku.PNG';
-
+import guessreddit from '../../../img/portfolio/GuessReddit.png';
 
 
 class PortfolioPage extends Component {
@@ -31,6 +31,10 @@ class PortfolioPage extends Component {
             </h1>
 
             <ul className="portfolioList">
+
+                <li>
+                    <PortfolioItem image={guessreddit} text={t('portfolioPage.guessReddit', '')} to={"http://www.code.spock.is/guessreddit"} />
+                </li>
 
                 <li>
                     <PortfolioItem image={solver} text={t('portfolioPage.csp', '')} to={"http://www.code.spock.is/csp"} />

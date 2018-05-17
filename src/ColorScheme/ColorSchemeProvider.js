@@ -22,7 +22,7 @@ const ColorSchemeProvider = {
             sideBar:    "#CBA46E",
             backGround: "#F3F0EA",
             textColor:  "#44333E",
-            linkColor:  "#A2636B",
+            linkColor:  "#74353D",
             linkEffectColor:    "#878E95"
       
           },

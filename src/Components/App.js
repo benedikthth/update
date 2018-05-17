@@ -80,12 +80,12 @@ class App extends Component {
         <Router>
 
           <div className={`App`}>
+              <Sidebar handleLocaleChange={this.handleLocaleChange.bind(this)} language={currentLocale} />
 
-            <Sidebar handleLocaleChange={this.handleLocaleChange.bind(this)} language={currentLocale} />
 
-              <Route name="home" exact path="/" component={HomePage} />
-              <Route name="portfolio" exact path="/portfolio" component={PortfolioPage} />
-              <Route name="cv" exact path="/cv" component={CvPage} />
+              <Route exact path={'/'} component={HomePage} />
+              <Route exact path="/portfolio" component={PortfolioPage} />
+              <Route exact path="/cv" component={CvPage} />
            
             </div>
           
